@@ -13,3 +13,6 @@ https://tailwindcss.com/
 - **heroicons**: Conjunto de iconos SVG para proyectos web. https://heroicons.com/
 
 - **React Query**: Librería para manejar el estado de las consultas de datos en aplicaciones React.  https://tanstack.com/query/latest
+
+- **headlessui**: Biblioteca de componentes UI para React. https://headlessui.com/react
+- 

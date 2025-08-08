@@ -52,8 +52,10 @@ export default function ProfileView() {
 
 
     const handleUserProfileForm = async (dataForm: ProfileForm) => {
-
-        updateProfileMutation.mutate(dataForm);
+        const user : User = queryClient.getQueryData(['user']);
+        user.description = dataForm.description;
+        user.handle = dataForm.handle;
+        updateProfileMutation.mutate(user);
     }
     return (
         <form
