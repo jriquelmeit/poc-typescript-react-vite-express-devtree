@@ -16,3 +16,4 @@ https://tailwindcss.com/
 
 - **headlessui**: Biblioteca de componentes UI para React. https://headlessui.com/react
 - 
+- **dnd kit**: Biblioteca para crear interfaces de arrastrar y soltar en React. https://dndkit.com/

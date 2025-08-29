@@ -100,3 +100,15 @@ export const uploadImage = async (req: Request, res: Response) => {
         });
     }
 }
+
+
+export const getUserByHandle = async (req: Request, res: Response) => {
+    try{
+
+    }catch (error){
+        res.status(500).json({
+            message: 'Error al obtener el usuario',
+            error: error instanceof Error ? error.message : 'Error desconocido'
+        });
+    }
+}

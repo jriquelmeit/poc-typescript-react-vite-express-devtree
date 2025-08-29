@@ -44,9 +44,7 @@ export default function LinkTreeView() {
         setDevTreeLinks(updateLinks)
 
     }
-
     const links: SocialNetwork[] = JSON.parse(user.links);
-
 
 
     const handleSwitchChange = (social: string) => {
@@ -84,14 +82,12 @@ export default function LinkTreeView() {
                 }
                 updatedItems = [...links, newItem]
             }
-
-
         }else{
             const indexToUpdate = links.findIndex(link => link.name === social);
             updatedItems = links.map(link=> {
                 if (link.name === social) {
                     return {...link, enabled: false, id: 0};
-                } else if (link.id > indexToUpdate){
+                } else if (link.id > indexToUpdate && (indexToUpdate !== 0 && link.id === 1)) {
                     return {
                         ...link,
                         id: link.id - 1
@@ -128,7 +124,7 @@ export default function LinkTreeView() {
             ))}
             <button
                 className='bg-cyan-400 p-2 text-lg w-full uppercase text-slate-600 rounded font-bold '
-                onClick={() => mutate(user)}
+                onClick={() => mutate(queryClient.getQueryData(['user'])!)}
             >
                 Guardar Cambios
             </button>
